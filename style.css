@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background:#091921;
+}
+main{
+    width:100%;
+    height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.calculatorform{
+    width:500px;
+    height:510px;
+    position:relative;
+    border:1px solid gray;
+    font-size: 25px;
+    font-weight:500px;
+    background-color: black;
+}
+.calculatorfor div{
+    width:100%;
+    height:calc(450px/6);
+    display: flex;
+    flex: 1;
+}
+  .screen input{
+    width:100%;
+    height:50px;
+    font-size:25px;
+    font-weight:bolder;
+    border:2px solid brown;
+    color:black;
+    background-color:burlywood;
+}
+.btn input{
+    width:20%;
+    height:90px;
+    padding:20px;
+    margin-top: 10px;
+    margin-left:15px;
+    font-size:25px;
+    font-weight: 500px;
+    border:2px solid whitesmoke;
+    color:white;
+    background-color:orangered;
+    border-radius:30px;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+    <main>
+        <form class="calculatorform"name="calculatorform">
+            <div class="screen">
+                <input type="text"name="screen"readonly>
+            </div>
+            <div class="screen">
+                <input type="button"class="clearbtn"name="clear"value="clear"onclick="remove()">
+            </div>
+            <div class="btn">
+                <input type="button"class="numbers"name="num1"value="1"onclick="valuebutton(this);">
+                <input type="button"class="numbers"name="num2"value="2"onclick="valuebutton(this);">
+                <input type="button"class="numbers"name="num3"value="3"onclick="valuebutton(this);">
+                <input type="button"class="numbers"name="plus"value="+"onclick="valuebutton(this);">
+             </div>
+             <div class="btn">
+                    <input type="button"class="numbers"name="num4"value="4"onclick="valuebutton(this);">
+                    <input type="button"class="numbers"name="num5"value="5"onclick="valuebutton(this);">
+                    <input type="button"class="numbers"name="num6"value="6"onclick="valuebutton(this);">
+                    <input type="button"class="numbers"name="sub"value="-"onclick="valuebutton(this);">
+                 </div>
+                 <div class="btn">
+                        <input type="button"class="numbers"name="num7"value="7"onclick="valuebutton(this);">
+                        <input type="button"class="numbers"name="num8"value="8"onclick="valuebutton(this);">
+                        <input type="button"class="numbers"name="num9"value="9"onclick="valuebutton(this);">
+                        <input type="button"class="numbers"name="mul"value="*"onclick="valuebutton(this);">
+                     </div>
+                     <div class="btn">
+                            <input type="button"class="numbers"name="num0"value="0"onclick="valuebutton(this);">
+                            <input type="button"class="numbers"name="div"value="/"onclick="valuebutton(this);">
+                            <input type="button"class="numbers"name="equal"value="="onclick="calculate();">
+                            <input type="button"class="numbers"name="parsand"value="%"onclick="valuebutton(this);">
+                         </div>
+        </form>
+    </main>
+    <script>
+        function valuebutton(e){
+            calculatorform.screen.value += e.value;
+        }
+        function remove(){
+            calculatorform.screen.value = null;
+        }
+        function calculate(){
+            calculatorform.screen.value =eval(calculatorform.screen.value);
+        }
+    </script>
+</body>
+</html>
